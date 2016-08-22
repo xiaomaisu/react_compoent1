@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>switch组件test</title>
+</head>
+<body>
+<style type="text/css">
+	.switch{
+		position: relative;
+  		display: inline-block;
+  		box-sizing: border-box;
+  		width: 44px;
+  		height: 22px;
+  		line-height: 20px;
+  		vertical-align: middle;
+  		border-radius: 20px;
+  		border: 1px solid #ccc;
+  		background-color: #ccc;
+  		cursor: pointer;
+  		-webkit-transition: all .3s cubic-bezier(.78,.14,.15,.86);
+  		transition: all .3s cubic-bezier(.78,.14,.15,.86);
+	}
+
+	.switch-checked{
+		border-color: #2db7f5;
+    	background-color: #2db7f5;
+	}
+
+	.switch:after{
+		position: absolute;
+   		width: 18px;
+   		height: 18px;
+   		left: 2px;
+   		top: 1px;
+   		border-radius: 18px;
+   		background-color: #fff;
+   		content: " ";
+   		cursor: pointer;
+   		-webkit-transition: left .3s cubic-bezier(.78,.14,.15,.86);
+   		transition: left .3s cubic-bezier(.78,.14,.15,.86);
+	}
+	.switch-checked:after{
+		left:22px;
+	}	
+</style>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script>
+$(function(){
+	// $('.switch').keydown(function(e) {
+	// 	// body...
+	// 	console.log(e.keyCode)
+	// })
+	$('.switch').click(function() {
+		$('.switch').toggleClass('switch-checked')
+	})
+})		
+</script>
+<span class="switch">
+</span>	
+</body>
+</html>
